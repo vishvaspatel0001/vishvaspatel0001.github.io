@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiracard | Developer Support</title>
+    <!-- Modern Google Font (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern Premium Design System */
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(99, 102, 241, 0.2));
+            border-radius: 26px;
+            z-index: -1;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-icon {
+            width: 90px;
+            height: 90px;
+            filter: drop-shadow(0 0 15px rgba(37, 99, 235, 0.5));
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            text-align: left;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 1.1rem 2rem;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 1.5rem;
+        }
+
+        .footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.2s ease;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 2.5rem 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Professional Diamond SVG Logo -->
+        <div class="logo-wrapper">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 12L82 38L50 88L18 38L50 12Z" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M50 12V88" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <path d="M18 38H82" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <path d="M50 12L50 38M50 38L82 38M50 38L18 38M50 38L50 88" stroke="#60a5fa" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <h1>Hiracard</h1>
+        <p class="subtitle">Official Developer & App Support</p>
+
+        <div class="card">
+            <div class="card-title">
+                <!-- Support Chat Icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                અમારો સંપર્ક કરો (Support Center)
+            </div>
+            <p class="card-text">
+                જો તમને Hiracard એપ્લિકેશન સંબંધિત કોઈ પણ પ્રશ્ન, સૂચન અથવા સમસ્યા હોય, તો તમે નીચે આપેલા બટન પર ક્લિક કરીને સીધો જ અમારો સંપર્ક કરી શકો છો. અમારી ટીમ તમને જલ્દી જ વળતો જવાબ આપશે.
+            </p>
+        </div>
+
+        <!-- Contact Support Button -->
+        <a href="mailto:hiracard.ison@gmail.com" class="btn">
+            <!-- Mail Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Email Support
+        </a>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2026 Hiracard. All Rights Reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="#privacy">Privacy Policy</a> | 
+                <a href="#terms">Terms & Conditions</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
